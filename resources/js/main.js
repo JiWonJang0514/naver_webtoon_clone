@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    renderTest();
+    // renderTest();
 });
 
 let webtoon_info = {
