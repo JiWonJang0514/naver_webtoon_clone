@@ -178,20 +178,30 @@ function qa(selector) {
 
 // 뿌려보기
 function renderTest() {
-    let html = '';
-
     // webtoon_info
-    html += `<div>
-        <img src="${webtoon_info.cover}">
+    let info_html = '';
+
+    info_html += `<div>
+        <img src="${webtoon_info.cover}">::
         ${webtoon_info.title}::${webtoon_info.is_cuttoon ? '컷툰' : ''}::
         ${webtoon_info.writer}::${webtoon_info.introduction}::`;
     for(let e of webtoon_info.genre) {
-        html += `${e}&nbsp;&nbsp;`;
+        info_html += `${e}&nbsp;&nbsp;`;
     }
-    html += `${webtoon_info.age}::${webtoon_info.like}`;
+    info_html += `${webtoon_info.age}::${webtoon_info.like}
+        </div>`;
+
+    q('body').innerHTML += info_html;
 
     // episode_list
-    
+    let ep_html = '<ol>';
 
-    q('body').innerHTML = html;
+    for(let e of episode_list.data) {
+        ep_html += `<li>
+            <img src="${e.thumbnail}">::${e.title}::${e.stars}::${e.upload_date}
+            </li>`;
+    }
+    ep_html += `</ol>`;
+
+    q('body').innerHTML += ep_html;
 }
