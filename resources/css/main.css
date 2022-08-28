@@ -1,4 +1,5 @@
 * {
+    --main-color: #12cb18;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -13,16 +14,92 @@ body {
 .container {
     margin: auto;
     width: 980px;
-    background-color: antiquewhite;
+    border-top: 1px solid red;
 }
 
 /* Content section Start */
 #webtoon-box {
     width: 72%;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .submenu {
+    margin-top: 0.8rem;
     display: flex;
+    font-size: 13px;
+}
+
+.submenu > li {
+    margin-right: 1rem;
+    line-height: 2rem;
+    color: #606060;
 }
 /* Content section End */
+
+
+/* Webtoon info Start */
+.webtoon-info {
+    padding: 2rem 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+.webtoon-info .cover {
+    margin-right: 0.9rem;
+}
+
+.webtoon-info .title {
+    height: 24px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.webtoon-info .title > h1 {
+    padding-right: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #020202;
+}
+
+.webtoon-info .title > .cuttoon-badge {
+    padding: 0px 3px 2px 4px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    font-size: 10px;
+    color: #fff;
+}
+
+.webtoon-info .title > .writer {
+    padding: 4px 0 0 6px;
+    font-size: 12px;
+    color: #444;
+}
+
+.webtoon-info .introduction {
+    margin: 0.8rem 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.webtoon-info .detail {
+    padding-bottom: 5px;
+    display: flex;
+    font-size: 12px;
+    color: #666;
+}
+
+.webtoon-info .detail span {
+    padding: 0 5px;
+    font-size: 10px;
+    color: #c9c9c9;
+}
+
+.infomenu {
+    display: flex;
+}
+.infomenu {
+    padding: 0.5rem;
+    border: 1px solid #eee;
+}
+/* Webtoon info End */
